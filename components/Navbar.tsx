@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "../utils/tiktik-logo.png";
+import { AiOutlineLogout } from 'react-icons/ai';
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 import { createOrGetUser } from "../utils";
 import useAuthStore from "../store/authStore";
 import { IoMdAdd } from "react-icons/io";
-import { AiOutlineLayout } from "react-icons/ai";
+
 
 const Navbar = () => {
 	//const user = false;
@@ -52,7 +53,7 @@ const Navbar = () => {
 							className="px-2"
 							onClick={() => {googleLogout(); removeUser()}}
 						>
-							<AiOutlineLayout color="red" fontSize={21}/>
+							<AiOutlineLogout color="red" fontSize={21}/>
 						</button>
 					</div>
 				) : (
